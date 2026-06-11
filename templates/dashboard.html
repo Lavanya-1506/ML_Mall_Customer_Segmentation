@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Analytics Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="/">
+            Customer Segmentation
+        </a>
+
+        <ul class="navbar-nav ms-auto">
+
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/predict">Predict</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link active" href="/dashboard">
+                    Dashboard
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/segments">
+                    Segments
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+</nav>
+
+<!-- Dashboard -->
+
+<div class="container py-5">
+
+    <h1 class="text-center fw-bold mb-5">
+        Analytics Dashboard
+    </h1>
+
+    <!-- KPI Cards -->
+
+    <div class="row g-4">
+
+        <div class="col-lg-3 col-md-6">
+            <div class="dashboard-card">
+                <h2>{{ total_customers }}</h2>
+                <p>Total Customers</p>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <div class="dashboard-card">
+                <h2>{{ total_clusters }}</h2>
+                <p>Total Clusters</p>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <div class="dashboard-card">
+                <h2>{{ avg_income }}</h2>
+                <p>Avg Income (k$)</p>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <div class="dashboard-card">
+                <h2>{{ avg_score }}</h2>
+                <p>Avg Spending Score</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Cluster Plot -->
+
+    <div class="chart-container mt-5">
+
+        <h3 class="mb-4 text-center">
+            Customer Segmentation Visualization
+        </h3>
+
+        <img
+            src="{{ url_for('static',
+            filename='images/cluster_plot.png') }}"
+            class="img-fluid rounded">
+
+    </div>
+
+    <!-- Cluster Distribution -->
+
+    <div class="chart-container mt-5">
+
+        <h3 class="mb-4">
+            Cluster Distribution
+        </h3>
+
+        <table class="table table-striped table-hover">
+
+            <thead class="table-dark">
+
+                <tr>
+                    <th>Cluster</th>
+                    <th>Customers</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                {% for cluster, count in cluster_counts.items() %}
+
+                <tr>
+                    <td>Cluster {{ cluster }}</td>
+                    <td>{{ count }}</td>
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
