@@ -1,0 +1,534 @@
+/* =========================
+   Global Styles
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:#f5f7fb;
+    color:#1f2937;
+    opacity:0;
+    transition:.5s;
+}
+
+.loaded{
+    opacity:1;
+}
+
+a{
+    text-decoration:none;
+}
+
+/* =========================
+   Navbar
+========================= */
+
+.navbar{
+    background:rgba(17,24,39,0.95) !important;
+    backdrop-filter:blur(10px);
+    padding:15px 0;
+}
+
+.navbar-brand{
+    font-size:1.5rem;
+    font-weight:700;
+    color:#fff !important;
+}
+
+.nav-link{
+    color:#d1d5db !important;
+    margin-left:15px;
+    transition:.3s;
+}
+
+.nav-link:hover{
+    color:#06b6d4 !important;
+}
+
+.nav-link.active{
+    color:#06b6d4 !important;
+    font-weight:600;
+}
+
+/* =========================
+   Hero Section
+========================= */
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+
+    background:
+    linear-gradient(
+    135deg,
+    #4f46e5,
+    #06b6d4
+    );
+
+    color:white;
+}
+
+.hero h1{
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    line-height:1.8;
+}
+
+.hero-img{
+    width:350px;
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+
+/* =========================
+   Buttons
+========================= */
+
+.btn-primary{
+    background:#fff;
+    color:#4f46e5;
+    border:none;
+    padding:12px 28px;
+    border-radius:50px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+    background:#f8fafc;
+    color:#4f46e5;
+}
+
+/* =========================
+   Feature Cards
+========================= */
+
+.feature-card{
+    position:relative;
+    background:#fff;
+    border:none;
+    border-radius:24px;
+    padding:35px 30px;
+    overflow:hidden;
+    height:100%;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.08);
+
+    transition:all .4s ease;
+}
+
+/* Left Border */
+
+.feature-card::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:6px;
+    height:100%;
+    border-radius:24px 0 0 24px;
+}
+
+.col-md-4:nth-child(1) .feature-card::before{
+    background:linear-gradient(
+    180deg,
+    #7c3aed,
+    #c084fc
+    );
+}
+
+.col-md-4:nth-child(2) .feature-card::before{
+    background:linear-gradient(
+    180deg,
+    #2563eb,
+    #60a5fa
+    );
+}
+
+.col-md-4:nth-child(3) .feature-card::before{
+    background:linear-gradient(
+    180deg,
+    #10b981,
+    #6ee7b7
+    );
+}
+
+/* Decorative Circle */
+
+.feature-card::after{
+    content:"";
+    position:absolute;
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    right:-50px;
+    bottom:-50px;
+    opacity:.1;
+}
+
+.col-md-4:nth-child(1) .feature-card::after{
+    background:#7c3aed;
+}
+
+.col-md-4:nth-child(2) .feature-card::after{
+    background:#2563eb;
+}
+
+.col-md-4:nth-child(3) .feature-card::after{
+    background:#10b981;
+}
+
+/* Hover */
+
+.feature-card:hover{
+    transform:
+    translateY(-12px)
+    scale(1.02);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.15);
+}
+
+.feature-card h3{
+    font-size:2rem;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.feature-card p{
+    color:#6b7280;
+    font-size:1.05rem;
+    line-height:1.8;
+}
+
+/* =========================
+   Prediction Page
+========================= */
+
+.predict-bg{
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+    120deg,
+    #4f46e5,
+    #06b6d4
+    );
+
+    display:flex;
+    align-items:center;
+}
+
+.prediction-card{
+    max-width:550px;
+    margin:auto;
+    background:rgba(255,255,255,0.95);
+
+    backdrop-filter:blur(15px);
+
+    padding:40px;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.15);
+}
+
+.prediction-card h2{
+    font-weight:700;
+    margin-bottom:30px;
+}
+
+.form-control{
+    border-radius:12px;
+    padding:12px;
+}
+
+.form-control:focus{
+    border-color:#4f46e5;
+    box-shadow:
+    0 0 10px rgba(79,70,229,.2);
+}
+
+/* =========================
+   Dashboard Cards
+========================= */
+
+.dashboard-card{
+    background:white;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.dashboard-card:hover{
+    transform:translateY(-8px);
+}
+
+.dashboard-card h2{
+    font-size:2.2rem;
+    font-weight:800;
+    color:#4f46e5;
+}
+
+.dashboard-card p{
+    color:#6b7280;
+    margin-top:10px;
+}
+
+/* =========================
+   Segments Page
+========================= */
+
+.segments-page{
+    min-height:100vh;
+    background:linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b,
+        #334155
+    );
+}
+
+.segments-title{
+    color:white;
+    font-size:4rem;
+    font-weight:800;
+    margin-bottom:10px;
+}
+
+.segments-subtitle{
+    color:#cbd5e1;
+    font-size:1.2rem;
+}
+
+/* Card */
+
+.segment-card{
+
+    padding:35px;
+
+    border-radius:25px;
+
+    color:white;
+
+    backdrop-filter:blur(15px);
+
+    min-height:320px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:all .4s ease;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.25);
+}
+
+.segment-card:hover{
+
+    transform:
+    translateY(-12px)
+    scale(1.03);
+
+    box-shadow:
+    0 25px 50px rgba(0,0,0,.35);
+}
+
+/* Icon */
+
+.icon-circle{
+
+    width:70px;
+    height:70px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.2);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:2rem;
+
+    margin-bottom:20px;
+}
+
+/* Text */
+
+.segment-card h3{
+
+    font-size:2rem;
+    font-weight:700;
+
+    margin-bottom:10px;
+}
+
+.segment-card p{
+
+    font-size:1.05rem;
+
+    margin-bottom:20px;
+
+    opacity:.95;
+}
+
+.segment-card ul{
+
+    padding-left:18px;
+}
+
+.segment-card li{
+
+    margin-bottom:10px;
+}
+
+/* Premium */
+
+.premium-card{
+    background:
+    linear-gradient(
+    135deg,
+    #7c3aed,
+    #c084fc
+    );
+}
+
+/* Budget */
+
+.budget-card{
+    background:
+    linear-gradient(
+    135deg,
+    #059669,
+    #34d399
+    );
+}
+
+/* Average */
+
+.average-card{
+    background:
+    linear-gradient(
+    135deg,
+    #f59e0b,
+    #fbbf24
+    );
+}
+
+/* Young */
+
+.young-card{
+    background:
+    linear-gradient(
+    135deg,
+    #2563eb,
+    #60a5fa
+    );
+}
+
+/* Careful */
+
+.careful-card{
+    background:
+    linear-gradient(
+    135deg,
+    #ef4444,
+    #fb7185
+    );
+}
+
+/* =========================
+   Charts Container
+========================= */
+
+.chart-container{
+    background:white;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+}
+
+/* =========================
+   Reveal Animation
+========================= */
+
+.feature-card,
+.dashboard-card,
+.segment-card{
+    opacity:0;
+    transition:all .6s ease;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media(max-width:768px){
+
+.hero{
+    text-align:center;
+    padding:50px 0;
+}
+
+.hero-img{
+    width:250px;
+    margin-top:30px;
+}
+
+.feature-card h3{
+    font-size:1.5rem;
+}
+
+.prediction-card{
+    padding:25px;
+}
+
+.dashboard-card{
+    margin-bottom:20px;
+}
+
+}
