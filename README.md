@@ -107,7 +107,6 @@ Average Income
 Average Spending Score
 Cluster Distribution
 ---
-```text
 
 ---
 
