@@ -132,82 +132,71 @@ Spending Score (1–100)
 
 # 🛠️ Technology Stack
 
-* Frontend      : React.js, Vite, Axios
-* Backend       : Flask, Flask-CORS
-* Machine Learning : Scikit-Learn, XGBoost, Imbalanced-Learn
-* Data Analysis : Pandas, NumPy
-* Visualization : Matplotlib, Seaborn, Plotly, Missingno
-* Model Storage : Joblib
-* Development   : Jupyter Notebook, VS Code
-* Version Control : Git, GitHub
-* Dataset       : IBM Telco Customer Churn Dataset
+| Category         | Technology                           |
+| ---------------- | ------------------------------------ |
+| Language         | Python                               |
+| Frontend         | HTML5, CSS3, JavaScript, Bootstrap 5 |
+| Backend          | Flask                                |
+| Machine Learning | Scikit-Learn                         |
+| Data Processing  | Pandas, NumPy                        |
+| Model Storage    | Joblib                               |
+| Visualization    | Chart.js                             |
+| Version Control  | Git, GitHub                          |
+| IDE              | VS Code                              |
+| Dataset          | Mall Customers Dataset               |
+
 
 ---
 
 # 📁 Project Structure
 
 ```text
-TELECOM_CHURN_PREDICTION/
-│
-├── backend/
-│   │
-│   ├── __pycache__/
-│   │
-│   ├── models/
-│   │   ├── best_model.pkl
-│   │   ├── best_model.pkl.bak
-│   │   ├── scaler.pkl
-│   │   └── scaler.pkl.bak
-│   │
-│   ├── notebooks/
-│   │   ├── business_insights.ipynb
-│   │   ├── data_cleaning.ipynb
-│   │   ├── data_understanding.ipynb
-│   │   ├── eda.ipynb
-│   │   ├── feature_engineering.ipynb
-│   │   ├── feature_importance.ipynb
-│   │   ├── model_training.ipynb
-│   │   └── shap_analysis.ipynb
-│   │
-│   ├── reports/
-│   │   └── business_summary.csv
-│   │
-│   ├── app.py
-│   └── requirements.txt
+Mall-Customer-Segmentation/
 │
 ├── data/
-│   │
-│   ├── processed/
-│   │   ├── cleaned_telco.csv
-│   │   └── engineered_telco.csv
-│   │
-│   └── raw/
-│       └── telco_churn.csv
+│   ├── Mall_Customers.csv
+│   └── processed_data.csv
 │
-├── frontend/
+├── notebooks/
+│   ├── EDA.ipynb
+│   └── Model_Training.ipynb
+│
+├── models/
+│   ├── kmeans_model.pkl
+│   ├── scaler.pkl
+│   └── cluster_labels.pkl
+│
+├── src/
+│   ├── data_preprocessing.py
+│   ├── feature_engineering.py
+│   ├── train_model.py
+│   ├── predict.py
+│   └── utils.py
+│
+├── static/
+│   ├── css/
+│   │   └── style.css
 │   │
-│   ├── node_modules/
+│   ├── js/
+│   │   └── script.js
 │   │
-│   ├── public/
-│   │
-│   ├── src/
-│   │   ├── assets/
-│   │   ├── components/
-│   │   ├── App.css
-│   │   ├── App.jsx
-│   │   ├── index.css
-│   │   └── main.jsx
-│   │
-│   ├── .gitignore
-│   ├── eslint.config.js
+│   └── images/
+│       ├── cluster_plot.png
+│       └── dashboard_bg.jpg
+│
+├── templates/
 │   ├── index.html
-│   ├── package.json
-│   ├── package-lock.json
-│   ├── README.md
-│   └── vite.config.js
+│   ├── dashboard.html
+│   ├── segments.html
+│   └── prediction.html
 │
-├── .gitignore
-└── README.md
+├── app.py
+│
+├── requirements.txt
+│
+├── README.md
+│
+└── .gitignore
 ```
 
 ---
@@ -215,19 +204,20 @@ TELECOM_CHURN_PREDICTION/
 ⚙️ Installation & Setup
 
 🚀 How to Run the Project
+1. Clone the Repository
 
-* Clone Repository
-  
-https://github.com/Lavanya-1506/Telecom_Churn_Prediction.git
-* Install Dependencies
-  
+2. Navigate to the Project Directory
+cd Mall-Customer-Segmentation
+3. Install Required Dependencies
 pip install -r requirements.txt
-* Run Frontend
-  
-npm run dev
-* Run Application
-  
+4. Train the Machine Learning Model
+Navigate to the source folder and run:
+cd src
+python train_model.py
+5. Run the Flask Application
 python app.py
+6. Open the Application in Browser
+http://127.0.0.1:5000
 
 ---
 
