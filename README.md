@@ -1,4 +1,3 @@
-# 🎓 AI Student Performance Tracker
 
 ## 📌 Internship Details
 
@@ -13,122 +12,100 @@
 ---
 
 # 📖 Project Overview
-# Telecom Customer Churn Prediction System
+# Mall Customer Segmentation
+Mall Customer Segmentation is a Machine Learning project that groups customers into different categories based on their demographic information and purchasing behavior. The project uses the K-Means Clustering algorithm to identify meaningful customer segments that can help businesses improve marketing strategies, customer engagement, and decision-making.
 
-The Telecom Customer Churn Prediction System is a Machine Learning-based web application designed to identify customers who are likely to discontinue telecom services. Customer churn is one of the most significant challenges faced by telecom companies, as acquiring new customers is often more expensive than retaining existing ones.
-
-This project leverages historical customer data, including demographic information, service subscriptions, contract details, and billing information, to predict the likelihood of customer churn. By analyzing customer behavior patterns, the system helps telecom providers proactively identify at-risk customers and implement retention strategies.
-
-The application provides data-driven insights through interactive visualizations, churn prediction models, feature importance analysis, and business recommendations, enabling organizations to improve customer retention and reduce revenue loss.
+The system provides a web-based interface where users can input customer details and predict the customer segment. It also includes a dashboard for visualizing customer insights and cluster statistics.
 
 ---
 
 # 🎯 Project Scope
+The project focuses on:
 
-* Customer churn prediction using Machine Learning algorithms.
+* Customer data analysis.
+* Data preprocessing and feature engineering.
+* Customer segmentation using K-Means Clustering.
+* Customer segment prediction through a web application.
+* Dashboard visualization of customer statistics.
+* Business intelligence through cluster analysis.
 
-* Data cleaning and preprocessing.
+Future enhancements may include:
 
-* Exploratory Data Analysis (EDA).
-
-* Feature engineering and transformation.
-
-* Training and comparison of multiple classification models.
-
-* Model evaluation using standard performance metrics.
-
-* Feature importance analysis.
-
-* Interactive dashboard for business insights.
-
-* Customer churn prediction interface.
-
-* Flask REST API integration.
-
-* React-based frontend application.
-
+* Real-time customer analytics.
+* Recommendation systems.
+* Advanced clustering algorithms.
+* Interactive business reports.
+  
 ---
 
 # ✨ Key Features
 
-* Customer Churn Prediction using Machine Learning
-* Exploratory Data Analysis (EDA) with Visualizations
-* Feature Engineering for Improved Model Performance
-* Multiple Model Training and Comparison
-* Model Evaluation using Accuracy, Precision, Recall, F1-Score, and ROC-AUC
-* Feature Importance Analysis to Identify Churn Factors
-* Interactive Dashboard for Business Insights
-* Real-Time Churn Prediction Interface
-* Flask REST API Integration
-* React-Based User Interface
-* Customer Risk Level Classification (Low, Medium, High)
+* Groups customers into multiple clusters based on behavior and demographics.
+* Predicts the segment of a new customer using the trained clustering model.
+* Displays customer statistics and segmentation insights.
+* Handles missing values and data cleaning.
+* Generates useful features for better clustering performance.
+* Provides cluster distribution and customer insights.
+* Modern Bootstrap-based web interface.
 
 ---
 
 # 🔄 Project Workflow
 
 ```text
-Telecom Customer Churn Dataset
-                │
-                ▼
-      Data Understanding
-                │
-                ▼
-        Data Cleaning
- (Missing Values, Duplicates,
- Data Type Conversion)
-                │
-                ▼
-  Exploratory Data Analysis
-     (EDA & Visualizations)
-                │
-                ▼
-      Feature Engineering
- (Service Count, Loyalty Score,
- Average Spending, etc.)
-                │
-                ▼
-        Data Encoding &
-         Feature Scaling
-                │
-                ▼
-      Train-Test Splitting
-                │
-                ▼
-        Model Training
-(Logistic Regression, Decision Tree,
- Random Forest, XGBoost)
-                │
-                ▼
-       Model Evaluation
-(Accuracy, Precision, Recall,
- F1-Score, ROC-AUC)
-                │
-                ▼
-    Feature Importance Analysis
-                │
-                ▼
-      SHAP Explainability
-                │
-                ▼
-        Best Model Selection
-                │
-                ▼
-          Model Saving
-                │
-                ▼
-          Flask API
-                │
-                ▼
-         React Frontend
-                │
-                ▼
-     Customer Churn Prediction
-                │
-                ▼
-      Dashboard & Insights
-```
+Step 1: Data Collection
+Load Mall Customers Dataset.
+Explore customer information.
+Step 2: Data Preprocessing
+Remove duplicates.
+Handle missing values.
+Clean and validate data.
+Step 3: Feature Engineering
+Create useful features.
+Prepare data for clustering.
+Step 4: Data Scaling
+Standardize numerical features using StandardScaler.
+Step 5: Model Training
+Train K-Means clustering model.
+Generate customer clusters.
+Step 6: Cluster Labeling
 
+Assign meaningful business labels:
+
+Premium Customers
+Budget Customers
+Young High Spenders
+Average Customers
+Careful Customers
+Step 7: Model Saving
+
+Store:
+
+KMeans Model
+StandardScaler
+
+using Joblib.
+
+Step 8: Prediction
+
+User enters:
+
+Gender
+Age
+Annual Income
+Spending Score
+
+The system predicts the customer segment.
+
+Step 9: Dashboard Visualization
+
+Display:
+
+Total Customers
+Total Clusters
+Average Income
+Average Spending Score
+Cluster Distribution
 ---
 
 # 🏗️ System Architecture
