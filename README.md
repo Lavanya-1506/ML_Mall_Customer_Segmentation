@@ -205,18 +205,18 @@ Mall-Customer-Segmentation/
 
 🚀 How to Run the Project
 1. Clone the Repository
-
-2. Navigate to the Project Directory
+* https://github.com/Lavanya-1506/ML_Mall_Customer_Segmentation
+3. Navigate to the Project Directory
 cd Mall-Customer-Segmentation
-3. Install Required Dependencies
+4. Install Required Dependencies
 pip install -r requirements.txt
-4. Train the Machine Learning Model
+5. Train the Machine Learning Model
 Navigate to the source folder and run:
 cd src
 python train_model.py
-5. Run the Flask Application
+6. Run the Flask Application
 python app.py
-6. Open the Application in Browser
+7. Open the Application in Browser
 http://127.0.0.1:5000
 
 ---
