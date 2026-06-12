@@ -114,12 +114,19 @@ Cluster Distribution
 
 The following algorithms were implemented and evaluated:
 
-* Logistic Regression
-* Decision Tree Regression
-* Random Forest Regression
-* XGBoost Regressor
+1. K-Means Clustering
+Type: Unsupervised Machine Learning
+Purpose: Groups customers into different segments based on their behavior and demographics.
+Output: Premium Customers, Budget Customers, Young High Spenders, Average Customers, and Careful Customers.
 
-The best-performing model was selected based on evaluation metrics.
+2. StandardScaler
+Type: Data Preprocessing Technique
+Purpose: Normalizes feature values before clustering to improve model performance.
+Features Used
+Gender
+Age
+Annual Income (k$)
+Spending Score (1–100)
 
 ---
 
