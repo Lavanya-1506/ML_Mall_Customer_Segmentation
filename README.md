@@ -223,15 +223,16 @@ http://127.0.0.1:5000
 
 # 🎯 Project Outcomes
 
-* Developed an end-to-end Machine Learning system for predicting telecom customer churn.
-* Performed comprehensive data cleaning, preprocessing, and feature engineering on telecom customer data.
-* Conducted Exploratory Data Analysis (EDA) to identify customer behavior patterns and churn trends.
-* Trained and compared multiple Machine Learning models, including Logistic Regression, Decision Tree, Random Forest, and XGBoost.
-* Evaluated model performance using Accuracy, Precision, Recall, F1-Score, ROC-AUC Score, and Confusion Matrix.
-* Identified key factors influencing customer churn through feature importance analysis.
-* Built a predictive model capable of classifying customers as likely to churn or remain with the company.
-* Developed a Flask-based REST API for model integration and prediction services.
-* Created an interactive React dashboard for visualizing churn insights and prediction results.
+After successful implementation, the system can:
+
+* Segment mall customers into meaningful groups.
+* Predict customer categories based on user input.
+* Provide business insights through dashboards.
+* Support targeted marketing strategies.
+* Improve customer relationship management.
+* Assist businesses in understanding spending behavior.
+
+The project demonstrates the practical application of Machine Learning, Data Analysis, and Web Development in solving real-world business problems.
 
 ---
 
