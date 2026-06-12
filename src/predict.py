@@ -18,8 +18,7 @@ class CustomerPredictor:
         self,
         age,
         income,
-        score,
-        gender
+        score
     ):
 
         data = np.array(
@@ -27,8 +26,7 @@ class CustomerPredictor:
                 [
                     age,
                     income,
-                    score,
-                    gender
+                    score
                 ]
             ]
         )
@@ -68,8 +66,7 @@ if __name__ == "__main__":
     result = predictor.predict(
         age=25,
         income=80,
-        score=90,
-        gender=1
+        score=90
     )
 
     print(result)

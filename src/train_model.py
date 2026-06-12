@@ -42,8 +42,7 @@ X = df[
     [
         "Age",
         "Annual Income (k$)",
-        "Spending Score (1-100)",
-        "Gender"
+        "Spending Score (1-100)"
     ]
 ]
 

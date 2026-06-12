@@ -46,7 +46,7 @@ required>
 
 </div>
 
-        <div class="mb-3">
+<div class="mb-3">
 
 <label>Spending Score</label>
 
@@ -55,17 +55,6 @@ type="number"
 name="score"
 class="form-control"
 required>
-
-</div>
-
-<div class="mb-3">
-
-<label>Gender</label>
-
-<select name="gender" class="form-control" required>
-<option value="Male">Male</option>
-<option value="Female">Female</option>
-</select>
 
 </div>
 
@@ -88,6 +77,17 @@ Predict Segment
 {% endif %}
 
 </div>
+
+        <div class="text-center mt-5">
+
+            <a href="/"
+               class="btn btn-primary btn-lg px-5">
+
+                Back To Home
+
+            </a>
+
+        </div>
 
 </div>
 <script src="{{ url_for('static', filename='js/script.js') }}"></script>
